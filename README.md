@@ -243,6 +243,6 @@ Moving in front of the Raspberry Pi PIR sensor should activate the piezo buzzer 
 Find more project tutorials [here](https://www.makeuseof.com/tag/10-raspberry-pi-projects-beginners/).
 
 # Reference
-https://www.raspberrypi.org/help/
-https://www.seeedstudio.com/blog/2019/09/29/top-20-best-raspberry-pi-4-projects-that-you-must-try-now/
+https://www.raspberrypi.org/help/<br>
+https://www.seeedstudio.com/blog/2019/09/29/top-20-best-raspberry-pi-4-projects-that-you-must-try-now/<br>
 https://www.makeuseof.com/tag/10-raspberry-pi-projects-beginners/

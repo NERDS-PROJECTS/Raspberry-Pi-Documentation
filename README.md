@@ -181,6 +181,8 @@ All you need to do is launch Minecraft on your computer or tablet, then :-<br>
 * Ensure the port number matches the one listed in the server properties.<br><br>
 
 If our Raspberry Pi Minecraft server is running and online, it should be listed as an option to connect to. Simply select the server to start playing.<br><br>
+![muo-diy-minecraft-raspberrypi-connect-server](https://user-images.githubusercontent.com/62924322/200530638-7eb03515-3380-42d0-b4ea-6fd6fdba6c0a.jpg)<br><br>
+
 
 **Step 5: Extend the Minecraft Server functions with Nukkit plugins**<br><br>
 The default configurations for the Nukkit server might not be wholly to our liking. Tweaking nukkit.yml and server.properties is one option, but will only get us so far. Plugins have been developed for Nukkit that allow us to enhance the basic gameplay. This adds features to the online session that have been omitted, such as the inclusion of animals.<br><br>
@@ -197,3 +199,74 @@ For example, the MobPlugin can be moved with :-<br>
 Head to the [Cloudburst](https://cloudburstmc.org/) website and click Resources to choose from over 250 plugins for our Raspberry Pi Minecraft Server.<br><br>
 
 We have created our very own Minecraft game server running on our Raspberry Pi. If we leave it up and running, we'll have an always-on Minecraft world that we can connect to and use!
+
+# Raspberry Pi Project - Pi Motion Sensor using PIR Sensor<br>
+A PIR sensor is a simple but excellent device for detecting when motion has occurred. These sensors were frequently employed in security systems of a bygone era. Every time motion is detected, a piezo speaker will also be activated. For both of these devices to function, the GPIO pins must be connected.<br><br>
+
+What do we require?<br>
+*Recommended*<br>
+- Raspberry Pi
+- MicroSD Card
+- PIR Sensor
+- Piezo Speaker
+- 100 Ohm Resistor
+- Breadboard
+- Jumper Wires
+*Optional*<br>
+- Ethernet Cable / Wi-Fi
+- GPIO Breakout Kit<br><br>
+
+**Hardware Setup**<br><br>
+We will be putting together a simple circuit that makes use of a PIR sensor and also a piezo speaker.<br>
+The majority of PIR sensors contain a few movable screws that can be used to change the sensors' timing and sensitivity. We can specify a delay before it goes off using the time (send a high signal). (Approximately 2-4 seconds) The sensitivity determines how much movement is required before it activates.<br><br>
+
+A simple speaker, the piezo buzzer produces sound anytime a current passes through it. In this circuit, whenever the motion detector circuit is triggered, the buzzer will emit a loud beep.<br><br>
+![motion_sensor](https://user-images.githubusercontent.com/62924322/200530390-2121ef0f-3a16-41f5-9fdc-d7b722eb9c41.png)<br><br>
+
+To consruct the circuit, follow these steps :-
+- Run a ground pin to the ground rail on the breadboard.
+- Run a 5v pin to the positive rail on the breadboard.
+- Connect the piezo buzzer to pin 7 (Red wire) and the ground rail (Black wire).
+- Run a wire from pin 11 to the breadboard. Place a 100-ohm resistor at the end of the wire. Then connect this up to the yellow wire of the PIR sensor.
+- Now for the PIR sensor run the red wire to the 5v line and the black wire to the ground rail on the breadboard.<br><br>
+
+**Software Setup**<br><br>
+We will need to do a little programming to activate our Raspberry Pi Motion sensor circuit. Similar to our introduction to the Raspberry Pi GPIO pins, this programming is really simple, making it a great way to learn Python fundamentals.<br><br>
+
+We import the GPIO and time Python packages as we will need these to be able to interact with the GPIO pins and also pause our script. We set three variables, the first two are references to our pins, and thus named appropriately. The current state variable is where we will store our sensor state. If this is 0, then it is off, or 1 means it has been activated. We will set our GPIO mode to reference the physical numbering of the pins rather than the actual numbering.  We also set up our GPIO pins to be either outputs or inputs.<br><br>
+
+In the next part, we have an infinite while loop. We begin by putting the script to sleep for 0.1 seconds. After this, we get the current state of the sensor, and if it is 1 (e.g. detected motion), then we run the code inside the if statement. If it isn’t 1, then we continue to loop continually checking the sensor. The code in the if statement sends the piezo buzzer to high that should emit a noise. The script will do this for a second then turn the buzzer off. After this, it will wait for another 5 seconds before exiting the if statement and then rechecking the Raspberry Pi PIR sensor.<br><br>
+
+We have also nested out code within a try, except, finally block. We have added this because we will need to use the keyboard to stop the script. It is also very important that we run *GPIO.cleanup()* to ensure our script cleans up nicely. The try, except, finally code allows us to do this.<br><br>
+
+**Code**<br><br>
+
+*import RPi.GPIO as GPIO*
+*import time*
+*pir_sensor = 11*
+*piezo = 7*
+*GPIO.setmode(GPIO.BOARD)*
+*GPIO.setup(piezo,GPIO.OUT)*
+*GPIO.setup(pir_sensor, GPIO.IN)*
+*current_state = 0*
+
+*try:*
+    *while True:*
+        *time.sleep(0.1)*
+        *current_state = GPIO.input(pir_sensor)*
+        *if current_state == 1:*
+            *print("GPIO pin %s is %s" % (pir_sensor, current_state))*
+            *GPIO.output(piezo,True)*
+            *time.sleep(1)*
+            *GPIO.output(piezo,False)*
+            *time.sleep(5)*
+*except KeyboardInterrupt:*
+    *pass*
+*finally:*
+    *GPIO.cleanup()*<br><br>
+   
+Run the script.<br>
+Moving in front of the Raspberry Pi PIR sensor should activate the piezo buzzer and cause it to make noise.
+
+# Reference
+https://www.raspberrypi.org/help/

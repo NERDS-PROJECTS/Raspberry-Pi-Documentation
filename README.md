@@ -1,12 +1,12 @@
 # Raspberry-Pi-Documentation
-![Raspberry_Pi_Logo svg](https://user-images.githubusercontent.com/62924322/200495540-4e0c29a9-7a99-4768-9430-c4017043004e.png)
-The Raspberry Pi is a versatile microcontroller that can do almost anything that a computer can. It uses Python programming and is a fantastic resource for learning about hardware hacking and coding. People use Raspberry Pi all across the world to develop programming skills, create hardware projects, home automation, leverage Edge computing and Kubernetes clusters, and even use them in industrial applications. Because of its inexpensive cost, versatility, and open design, it is frequently used in robotics and numerous fields including weather monitoring. Due to its support of the HDMI and USB standards, Raspberry Pi is a favourite for computer and electronic enthusiasts.
+![Raspberry_Pi_Logo svg](https://user-images.githubusercontent.com/62924322/200495540-4e0c29a9-7a99-4768-9430-c4017043004e.png)<br>
+The Raspberry Pi is a versatile microcontroller that can do almost anything that a computer can. It uses Python programming and is a fantastic resource for learning about hardware hacking and coding. People use Raspberry Pi all across the world to develop programming skills, create hardware projects, home automation, leverage Edge computing and Kubernetes clusters, and even use them in industrial applications. Because of its inexpensive cost, versatility, and open design, it is frequently used in robotics and numerous fields including weather monitoring. Due to its support of the HDMI and USB standards, Raspberry Pi is a favourite for computer and electronic enthusiasts.<br>
 ![Raspberry_Pi_4_Model_B_-_Side](https://user-images.githubusercontent.com/62924322/200495676-0d826a32-8213-4954-9ae4-953cb741c4c8.jpg)
 
 # Versions Released
 There are three series of Raspberry Pi, and several generations of each have been released.
 
-1) Raspberry Pi 
+1) **Raspberry Pi**<br> 
 	i) Raspberry Pi Model B                                 
   	ii) Raspberry Pi Model A
 	iii) Raspberry Pi Model B+                             

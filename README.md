@@ -203,18 +203,14 @@ We have created our very own Minecraft game server running on our Raspberry Pi. 
 # Raspberry Pi Project - Pi Motion Sensor using PIR Sensor<br>
 A PIR sensor is a simple but excellent device for detecting when motion has occurred. These sensors were frequently employed in security systems of a bygone era. Every time motion is detected, a piezo speaker will also be activated. For both of these devices to function, the GPIO pins must be connected.<br><br>
 
-What do we require?<br>
-*Recommended*<br>
+What do we require?
 - Raspberry Pi
 - MicroSD Card
 - PIR Sensor
 - Piezo Speaker
 - 100 Ohm Resistor
 - Breadboard
-- Jumper Wires
-*Optional*<br>
-- Ethernet Cable / Wi-Fi
-- GPIO Breakout Kit<br><br>
+- Jumper Wires<br><br>
 
 **Hardware Setup**<br><br>
 We will be putting together a simple circuit that makes use of a PIR sensor and also a piezo speaker.<br>
@@ -240,34 +236,13 @@ In the next part, we have an infinite while loop. We begin by putting the script
 We have also nested out code within a try, except, finally block. We have added this because we will need to use the keyboard to stop the script. It is also very important that we run *GPIO.cleanup()* to ensure our script cleans up nicely. The try, except, finally code allows us to do this.<br><br>
 
 **Code**<br><br>
-'''
-*import RPi.GPIO as GPIO*
-*import time*
-*pir_sensor = 11*
-*piezo = 7*
-*GPIO.setmode(GPIO.BOARD)*
-*GPIO.setup(piezo,GPIO.OUT)*
-*GPIO.setup(pir_sensor, GPIO.IN)*
-*current_state = 0*
-
-*try:*
-    *while True:*
-        *time.sleep(0.1)*
-        *current_state = GPIO.input(pir_sensor)*
-        *if current_state == 1:*
-            *print("GPIO pin %s is %s" % (pir_sensor, current_state))*
-            *GPIO.output(piezo,True)*
-            *time.sleep(1)*
-            *GPIO.output(piezo,False)*
-            *time.sleep(5)*
-*except KeyboardInterrupt:*
-    *pass*
-*finally:*
-    *GPIO.cleanup()*
-'''
-<br><br>   
+![code](https://user-images.githubusercontent.com/62924322/200537744-9aaf826a-041b-4ebf-aaa2-18b9a9f97e79.png)<br><br>   
 Run the script.<br>
-Moving in front of the Raspberry Pi PIR sensor should activate the piezo buzzer and cause it to make noise.
+Moving in front of the Raspberry Pi PIR sensor should activate the piezo buzzer and cause it to make noise.<br><br>
+
+Find more project tutorials [here](https://www.makeuseof.com/tag/10-raspberry-pi-projects-beginners/).
 
 # Reference
 https://www.raspberrypi.org/help/
+https://www.seeedstudio.com/blog/2019/09/29/top-20-best-raspberry-pi-4-projects-that-you-must-try-now/
+https://www.makeuseof.com/tag/10-raspberry-pi-projects-beginners/

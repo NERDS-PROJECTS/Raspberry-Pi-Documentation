@@ -1,5 +1,5 @@
-# Raspberry-Pi-Documentation
-![Raspberry_Pi_Logo svg](https://user-images.githubusercontent.com/62924322/200495540-4e0c29a9-7a99-4768-9430-c4017043004e.png)<br><br>
+# Getting Started with Raspberry Pi
+![Raspberry_Pi_Logo svg](https://user-images.githubusercontent.com/62924322/200495540-4e0c29a9-7a99-4768-9430-c4017043004e.png)<br>
 The Raspberry Pi is a versatile microcontroller that can do almost anything that a computer can. It uses Python programming and is a fantastic resource for learning about hardware hacking and coding. People use Raspberry Pi all across the world to develop programming skills, create hardware projects, home automation, leverage Edge computing and Kubernetes clusters, and even use them in industrial applications. Because of its inexpensive cost, versatility, and open design, it is frequently used in robotics and numerous fields including weather monitoring. Due to its support of the HDMI and USB standards, Raspberry Pi is a favourite for computer and electronic enthusiasts.<br><br>
 ![Raspberry_Pi_4_Model_B_-_Side](https://user-images.githubusercontent.com/62924322/200495676-0d826a32-8213-4954-9ae4-953cb741c4c8.jpg)
 
@@ -7,7 +7,7 @@ The Raspberry Pi is a versatile microcontroller that can do almost anything that
 There are three series of Raspberry Pi, and several generations of each have been released.<br><br>
 
 1) **Raspberry Pi**<br> 
-	i) Raspberry Pi Model B<br>                                
+	i) Raspberry Pi Model B                                
   	ii) Raspberry Pi Model A<br>
 	iii) Raspberry Pi Model B+                            
   	iv) Raspberry Pi 2<br>
@@ -42,8 +42,8 @@ All Raspberry Pi models contain a USB port (the same one seen on many cell phone
 
 *Power Supply*<br><br>
 We need a power supply that provides :-<br>
--> At least 3.0A for Raspberry Pi 4.<br>
--> At least 2.5A for Raspberry Pi 3.<br><br>
+* At least 3.0A for Raspberry Pi 4.<br>
+* At least 2.5A for Raspberry Pi 3.<br><br>
 
 *Storage*<br><br>
 To store all of its files including the Raspberry Pi OS operating system, our Raspberry Pi needs an SD card. We need a microSD card with a capacity of at least 8GB. For the Raspberry Pi, many vendors offer SD cards that are pre-installed with the operating system and ready to use.<br><br>
@@ -66,16 +66,16 @@ Some screens only have a VGA port. We can use an HDMI to VGA converter to connec
 For connecting to the internet, the larger Raspberry Pi models (but not the Raspberry Pi Zero or Raspberry Pi Zero W) feature a conventional Ethernet connector; the Raspberry Pi Zero requires a USB to Ethernet adaptor. Wireless internet access is also available for Raspberry Pi Zero W, Raspberry Pi 3, and Raspberry Pi 4.<br><br>
 
 # Connecting Raspberry Pi
--Connect everything to our Raspberry Pi at this time. To ensure the safety of all our components, it is crucial to complete these steps in the proper order.<br><br>
--Insert the SD card we have set up with Raspberry Pi OS into the microSD card slot on the underside of our Raspberry Pi. Many microSD cards come inside a larger adapter — we can slide the smaller card out using the lip at the bottom.<br><br>
+- Connect everything to our Raspberry Pi at this time. To ensure the safety of all our components, it is crucial to complete these steps in the proper order.<br><br>
+- Insert the SD card we have set up with Raspberry Pi OS into the microSD card slot on the underside of our Raspberry Pi. Many microSD cards come inside a larger adapter — we can slide the smaller card out using the lip at the bottom.<br><br>
 ![sd-card-holder](https://user-images.githubusercontent.com/62924322/200497446-8e5a7b78-bf76-418e-bb77-018e5757dddf.png)<br><br>
--It doesn't matter which port we choose; just locate the USB connection end of the mouse's cable and attach the mouse to the Raspberry Pi.<br><br>
+- It doesn't matter which port we choose; just locate the USB connection end of the mouse's cable and attach the mouse to the Raspberry Pi.<br><br>
 ![pi-mouse](https://user-images.githubusercontent.com/62924322/200497523-bd7dbece-fedd-4a1f-9493-5878b661806e.png)<br><br>
--Connect the keyboard in the same way.<br><br>
+- Connect the keyboard in the same way.<br><br>
 ![pi-keyboard](https://user-images.githubusercontent.com/62924322/200497590-54a4edfc-a13f-4445-9e56-422e6088fa68.png)<br><br>
--Make sure our screen is plugged into a wall socket and switched on.<br><br>
--Look at our Raspberry Pi's HDMI port(s); we'll see that they have a flat surface on top.<br><br>
--Use a cable to connect the screen to Raspberry Pi’s HDMI port — use an adapter if necessary.<br><br>
+- Make sure our screen is plugged into a wall socket and switched on.<br><br>
+- Look at our Raspberry Pi's HDMI port(s); we'll see that they have a flat surface on top.<br><br>
+- Use a cable to connect the screen to Raspberry Pi’s HDMI port — use an adapter if necessary.<br><br>
 
 *Raspberry Pi 4*<br><br>
 Use HDMI0, the first HDMI port on the Raspberry Pi 4, to connect our display. Use HDMI0 instead of HDMI1 (which is closest to the power in port).<br><br>
@@ -96,9 +96,9 @@ Now let us head toward a Raspberry Pi project for beginners (and gamers), withou
 
 # Raspberry Pi Project - Setting up Minecraft Server on Pi<br>
 What do we require?<br>
--Raspberry Pi 3 / Raspberry Pi 4 and power cable<br>
--Ethernet cable<br>
-->16GB or larger microSD card<br><br>
+- Raspberry Pi 3 / Raspberry Pi 4 and power cable<br>
+- Ethernet cable<br>
+- 16GB or larger microSD card<br><br>
 
 Would you like to play Minecraft at your own pace? Create your own worlds, set up your own server, and even build in them with family and friends?
 It’s remarkable that we can do all of these on a Raspberry Pi.<br><br>
@@ -106,10 +106,10 @@ It’s remarkable that we can do all of these on a Raspberry Pi.<br><br>
 This can be done with previous Pi models, but the outcomes aren't as nice. It should be noted that since an Ethernet cable is faster than Wi-Fi, it is advised. Wireless networking is an option, however a faster connection results in greater server performance and better game performance.<br><br>
 
 All the above, when used with a remote SSH connection, will let us set up a Minecraft server on your Raspberry Pi. If SSH isn't an option, you will also need :-<br>
--USB keyboard<br>
--USB mouse (or a combination of both)<br>
--1 x HDMI cable<br>
--A monitor or other compatible display<br>
+- USB keyboard<br>
+- USB mouse (or a combination of both)<br>
+- 1 x HDMI cable<br>
+- A monitor or other compatible display<br>
 Connect these peripherals before powering on the Raspberry Pi.<br><br>
 
 Of course, we'll also need Minecraft installed on our PC. We should be aware that the Raspberry Pi's system requirements prevent us from hosting a large number of guests. It should not be attempted to host more than 10 users on the Pi 3. Depending on the RAM we choose, a Raspberry Pi 4 Minecraft server can accommodate more players.<br><br>
@@ -123,10 +123,10 @@ https://www.raspberrypi.com/software/operating-systems/. For speed we can use th
 
 If we're accessing via SSH, use sudo raspi-config to open the text-based configuration tool.<br>
 Here, the following changes should be made :- <br>
--Go to Advanced Options > Memory Split and change the setting to 16MB. This will free more memory resources for the server.<br>
--Next, go to Boot Options > Desktop/CLI and select Console. (No need to do this on Raspberry Pi OS Lite)<br>
--Enable SSH in Advanced Options > SSH.<br>
--Finally, go to Advanced > Expand Filesystem.<br><br>
+- Go to Advanced Options > Memory Split and change the setting to 16MB. This will free more memory resources for the server.<br>
+- Next, go to Boot Options > Desktop/CLI and select Console. (No need to do this on Raspberry Pi OS Lite)<br>
+- Enable SSH in Advanced Options > SSH.<br>
+- Finally, go to Advanced > Expand Filesystem.<br><br>
 
 With these changes made, go to Finish and reboot Raspberry Pi OS at the prompt. Once done, login again, and find the IP address of the device with :-<br> 
 *sudo hostname -* (or) *ifconfig*<br>
@@ -175,10 +175,10 @@ This will restart the Minecraft Server, but not the Raspberry Pi.<br><br>
 Your local network's Minecraft server should now be operational. Using the IP address you earlier noted down, check this using the ping command from another device. You're good to go as long as your Raspberry Pi responds to the ping.<br><br>
 
 All you need to do is launch Minecraft on your computer or tablet, then :-<br> 
--> Click Play > Servers.<br>
--> Select Add Server.<br>
--> Input new server details (name, IP address).<br>
--> Ensure the port number matches the one listed in the server properties.<br><br>
+* Click Play > Servers.<br>
+* Select Add Server.<br>
+* Input new server details (name, IP address).<br>
+* Ensure the port number matches the one listed in the server properties.<br><br>
 
 If our Raspberry Pi Minecraft server is running and online, it should be listed as an option to connect to. Simply select the server to start playing.<br><br>
 
@@ -186,14 +186,14 @@ If our Raspberry Pi Minecraft server is running and online, it should be listed 
 The default configurations for the Nukkit server might not be wholly to our liking. Tweaking nukkit.yml and server.properties is one option, but will only get us so far. Plugins have been developed for Nukkit that allow us to enhance the basic gameplay. This adds features to the online session that have been omitted, such as the inclusion of animals.<br><br>
 
 Suggested Nukkit plugins include :-<br> 
--> MobPlugin (https://cloudburstmc.org/resources/mobplugin.3/): adds mobs and animals to the Minecraft environment.<br>
--> WorldEssentials (https://cloudburstmc.org/resources/worldessentials.148/): enables different game modes.<br>
--> EssentialsNK (https://cloudburstmc.org/resources/essentialsnk.15/): includes additional game modes, multiplayer management tools, etc.<br><br>
+* [MobPlugin](https://cloudburstmc.org/resources/mobplugin.3/): adds mobs and animals to the Minecraft environment.<br>
+* [WorldEssentials](https://cloudburstmc.org/resources/worldessentials.148/): enables different game modes.<br>
+* [EssentialsNK](https://cloudburstmc.org/resources/essentialsnk.15/): includes additional game modes, multiplayer management tools, etc.<br><br>
 
 These plugins are compatible with a Minecraft server on Raspberry Pi 3 and 4 and can be installed simply by downloading to our Pi and copying the file to the plugins directory.<br>
 For example, the MobPlugin can be moved with :-<br> 
 *sudo mv MobPlugin-1.9.0.1.jar plugins*<br><br>
 
-Head to the Cloudburst website (https://cloudburstmc.org/) and click Resources to choose from over 250 plugins for our Raspberry Pi Minecraft Server.<br><br>
+Head to the [Cloudburst](https://cloudburstmc.org/) website and click Resources to choose from over 250 plugins for our Raspberry Pi Minecraft Server.<br><br>
 
 We have created our very own Minecraft game server running on our Raspberry Pi. If we leave it up and running, we'll have an always-on Minecraft world that we can connect to and use!

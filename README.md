@@ -240,7 +240,7 @@ In the next part, we have an infinite while loop. We begin by putting the script
 We have also nested out code within a try, except, finally block. We have added this because we will need to use the keyboard to stop the script. It is also very important that we run *GPIO.cleanup()* to ensure our script cleans up nicely. The try, except, finally code allows us to do this.<br><br>
 
 **Code**<br><br>
-
+'''
 *import RPi.GPIO as GPIO*
 *import time*
 *pir_sensor = 11*
@@ -263,8 +263,9 @@ We have also nested out code within a try, except, finally block. We have added 
 *except KeyboardInterrupt:*
     *pass*
 *finally:*
-    *GPIO.cleanup()*<br><br>
-   
+    *GPIO.cleanup()*
+'''
+<br><br>   
 Run the script.<br>
 Moving in front of the Raspberry Pi PIR sensor should activate the piezo buzzer and cause it to make noise.
 
